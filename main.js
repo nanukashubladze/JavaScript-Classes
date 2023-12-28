@@ -21,8 +21,12 @@ class Calculator {
   }
 
   divide(value) {
-    this.result /= value;
-    return this;
+    if (value === 0) {
+      console.error("Division by zero is not allowed.");
+      return this;
+  }
+  this.result /= value;
+  return this;
   }
 
   pow(exponent) {
